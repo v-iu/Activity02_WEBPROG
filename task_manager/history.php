@@ -1,5 +1,6 @@
 <?php
-require 'init.php';
+session_start();
+require 'db.php';
 
 $db = new Database();
 $pdo = $db->getConnection();

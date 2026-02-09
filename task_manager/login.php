@@ -1,5 +1,7 @@
 <?php
-require 'init.php';
+session_start();
+require 'db.php';
+require 'user.php';
 
 $db = new Database();
 $userObj = new User($db->getConnection());

@@ -37,5 +37,11 @@ class User {
         }
         return false;
     }
+
+    public function getUsers() {
+        $stmt = $this->pdo->prepare("SELECT id, username FROM users ORDER BY id ASC");
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
 }
 ?>
